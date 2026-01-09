@@ -12,15 +12,28 @@ using namespace std;
 
 // Input: arr = [4, 3, 2, 5, 8]
 
-// Output: 2
+// Output: 3
 
-// Elements satisfying condition: 2, 8
+// Elements satisfying condition: 2, 5, 8
 
 
 class Solution{
     public:
     int countRightSmaller(vector<int> &arr){
         int cnt=1;
-        for(arr.size())
+        int min=arr[arr.size()-1];
+        for(int i=arr.size() -2; i>=0; i--){
+            if(arr[i]<min){
+                cnt++;
+                min= arr[i];
+            }
+
+        }
+        return cnt;
     }
 };
+
+int main(){
+    vector<int> arr={4, 3, 2, 5, 8};
+    cout<< Solution(). countRightSmaller(arr);
+}
