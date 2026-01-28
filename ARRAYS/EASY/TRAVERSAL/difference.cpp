@@ -12,7 +12,7 @@ using namespace std;
 // Output: 8
 
 // Maximum = 9, Minimum = 1
-// Difference = 9 - 1 = 8
+// Difference = 9 - 1 = 8 ans
 
 class Solution{
     public:
